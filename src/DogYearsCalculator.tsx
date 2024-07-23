@@ -51,8 +51,7 @@ const DogYearsCalculator = () => {
                         {dogName && (
                             <div>
                                 <label>
-                                    Your dog {dogName} is {dogYears.years}
-                                    years,{" "} {dogYears.months} months, and {dogYears.days} days old in dog years.
+                                    Your dog {dogName} is {dogYears.years} years,{" "} {dogYears.months} months, and {dogYears.days} days old in dog years.
                                 </label>
                             </div>
                         )}
