@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const DogYearsCalculator = () => {
     const [dogName, setDogName] = useState<string>("");
     const [humanYears, setHumanYears] = useState<number>(0);
@@ -29,7 +28,9 @@ const DogYearsCalculator = () => {
                                 id="dogName"
                                 value={dogName}
                                 placeholder="Fido"
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDogName(e.target.value)}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                    setDogName(e.target.value)
+                                }
                             />
                         </label>
 
@@ -39,7 +40,9 @@ const DogYearsCalculator = () => {
                                 type="number"
                                 name="humanYears"
                                 value={humanYears}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setHumanYears(e.target.valueAsNumber)}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                                    setHumanYears(e.target.valueAsNumber)
+                                }
                             />
                         </label>
                     </div>
@@ -48,14 +51,14 @@ const DogYearsCalculator = () => {
                         {dogName && (
                             <div>
                                 <label>
-                                    Your dog {dogName} is {dogYears.years} years, {dogYears.months} months, and {dogYears.days} days old in dog years.
+                                    Your dog {dogName} is {dogYears.years}
+                                    years,{" "} {dogYears.months} months, and {dogYears.days} days old in dog years.
                                 </label>
                             </div>
                         )}
-                    </div >
+                    </div>
                 </form>
             </div>
-
         </>
     );
 };
